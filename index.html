@@ -1,312 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Persona 5 The Phantom X</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #000;
-            color: #fff;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        /* Header Styles */
-        header {
-            text-align: center;
-            padding: 40px 0;
-        }
-        
-        .logo {
-            margin-bottom: 20px;
-        }
-        
-        .logo img {
-            max-width: 180px;
-            height: auto;
-        }
-        
-        .game-title {
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: #e60012;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            text-shadow: 0 0 10px rgba(230, 0, 18, 0.7);
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            color: #aaa;
-            margin-bottom: 30px;
-        }
-        
-        /* Download Buttons */
-        .download-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .download-btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #e60012;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 2px solid #e60012;
-        }
-        
-        .download-btn:hover {
-            background: transparent;
-            color: #e60012;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(230, 0, 18, 0.4);
-        }
-        
-        .file-size {
-            text-align: center;
-            margin-top: 10px;
-            color: #888;
-            font-size: 0.9rem;
-        }
-        
-        /* Video Section */
-        .video-section {
-            margin: 50px 0;
-            text-align: center;
-        }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 800px;
-            margin: 0 auto;
-            border: 2px solid #e60012;
-            border-radius: 8px;
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        /* Screenshots Section */
-        .screenshots {
-            margin: 50px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #e60012;
-        }
-        
-        .screenshot-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .screenshot-item {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(230, 0, 18, 0.3);
-            transition: transform 0.3s ease;
-        }
-        
-        .screenshot-item:hover {
-            transform: scale(1.03);
-        }
-        
-        .screenshot-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* Game Info Section */
-        .game-info {
-            margin: 50px 0;
-        }
-        
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .info-card {
-            background: #111;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #e60012;
-        }
-        
-        .info-card h3 {
-            color: #e60012;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-        
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px 0;
-            margin-top: 50px;
-            border-top: 1px solid #222;
-            color: #888;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .game-title {
-                font-size: 2rem;
-            }
-            
-            .download-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .download-btn {
-                width: 100%;
-                max-width: 300px;
-                text-align: center;
-            }
-            
-            .screenshot-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>PLYSMART</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: white;
+      text-align: center;
+    }
+
+    /* Language Selector */
+    .language-switcher {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+    .language-switcher select {
+      padding: 6px;
+      border-radius: 8px;
+      border: none;
+      font-weight: bold;
+      background: #1e293b;
+      color: white;
+    }
+
+    /* Logo */
+    .logo {
+      font-size: 42px;
+      font-weight: bold;
+      margin-top: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      color: #3b82f6;
+      text-transform: uppercase;
+      animation: glow 2s infinite alternate;
+    }
+    .logo span.smart {
+      color: #fff;
+      text-shadow: 0 0 8px #3b82f6, 0 0 15px #1d4ed8;
+    }
+    .logo i {
+      font-size: 32px;
+      color: #3b82f6;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #1d4ed8; }
+      to { text-shadow: 0 0 20px #60a5fa; }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    /* Search */
+    .search-box {
+      margin: 30px auto;
+      display: flex;
+      justify-content: center;
+      max-width: 500px;
+    }
+    .search-box input {
+      width: 70%;
+      padding: 14px;
+      border-radius: 12px 0 0 12px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+    }
+    .search-box button {
+      padding: 14px 20px;
+      border: none;
+      border-radius: 0 12px 12px 0;
+      background: #3b82f6;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .search-box button:hover {
+      background: #2563eb;
+    }
+
+    /* Categories */
+    .categories {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+      gap: 15px;
+    }
+    .cat {
+      background: #1e293b;
+      border-radius: 16px;
+      padding: 15px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .cat:hover {
+      background: #334155;
+      transform: scale(1.02);
+    }
+    .cat i {
+      font-size: 24px;
+      color: #3b82f6;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header>
-            <div class="logo">
-                <img src="https://i.postimg.cc/mDfbnB79/unnamed.png" alt="Persona 5 The Phantom X Logo">
-            </div>
-            <h1 class="game-title">Persona 5 The Phantom X</h1>
-            <p class="subtitle">Become the phantom thief and change the hearts of corrupt adults</p>
-            
-            <!-- Download Buttons -->
-            <div class="download-buttons">
-                <a href="#" class="download-btn" id="android-btn">Download for Android</a>
-                <a href="#" class="download-btn" id="ios-btn">Download for iOS</a>
-            </div>
-            <p class="file-size">Game Size: 3.2 GB</p>
-        </header>
-        
-        <!-- Video Section -->
-        <section class="video-section">
-            <h2 class="section-title">Game Trailer</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/5ULiusPxQG4?si=k3QoTbTJhBslHhag" allowfullscreen></iframe>
-            </div>
-        </section>
-        
-        <!-- Screenshots Section -->
-        <section class="screenshots">
-            <h2 class="section-title">Screenshots</h2>
-            <div class="screenshot-grid">
-                <div class="screenshot-item">
-                    <img src="https://i.postimg.cc/4y8RXgHB/m-ZVGW9f-Sriz-Ure-ES92kn-XX.jpg" alt="Persona 5 The Phantom X Screenshot 1">
-                </div>
-                <div class="screenshot-item">
-                    <img src="https://i.postimg.cc/XNxbfw1d/fighting-a-battle-in-persona-5-the-phantom-x.jpg" alt="Persona 5 The Phantom X Screenshot 2">
-                </div>
-                <div class="screenshot-item">
-                    <img src="https://i.postimg.cc/Nj2vvZsk/screenshot-230.jpg" alt="Persona 5 The Phantom X Screenshot 3">
-                </div>
-                <div class="screenshot-item">
-                    <img src="https://i.postimg.cc/ZqrkC3y9/ss-56e3a1345123b1f5ae159fc84f994030dd5103a3-1920x1080.jpg" alt="Persona 5 The Phantom X Screenshot 4">
-                </div>
-            </div>
-        </section>
-        
-        <!-- Game Information Section -->
-        <section class="game-info">
-            <h2 class="section-title">Game Information</h2>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>About the Game</h3>
-                    <p>Persona 5: The Phantom X is a new mobile RPG set in the Persona universe. Experience the life of a high school student who becomes a Phantom Thief to change the hearts of corrupt adults. With new characters, personas, and storylines, this game brings the Persona 5 experience to mobile devices.</p>
-                </div>
-                
-                <div class="info-card">
-                    <h3>Key Features</h3>
-                    <ul>
-                        <li>Engaging turn-based combat system</li>
-                        <li>Deep social simulation elements</li>
-                        <li>Stylish UI and visuals true to the Persona series</li>
-                        <li>New characters and storylines</li>
-                        <li>Persona fusion and collection</li>
-                        <li>Day/night cycle affecting gameplay</li>
-                    </ul>
-                </div>
-                
-                <div class="info-card">
-                    <h3>System Requirements</h3>
-                    <p><strong>Android:</strong> Android 9.0 or higher, 4GB RAM, Snapdragon 845/equivalent or better</p>
-                    <p><strong>iOS:</strong> iOS 13.0 or later, iPhone 8 or newer, iPad Air (3rd gen) or newer</p>
-                    <p><strong>Storage:</strong> 3.2 GB available space</p>
-                </div>
-                
-                <div class="info-card">
-                    <h3>Story</h3>
-                    <p>You are a high school student in Tokyo who discovers the power of Persona. Along with your friends, you form the Phantom Thieves to enter the Metaverse and change the hearts of corrupt adults. Balance your daily school life with your secret phantom thief activities.</p>
-                </div>
-            </div>
-        </section>
-    </div>
-    
-    <footer>
-        <p>© SEGA / ATLUS. All rights reserved.</p>
-    </footer>
 
-    <!-- Content Locker Script -->
-    <script type="text/javascript">
-        // Add event listeners to download buttons
-        document.getElementById('android-btn').addEventListener('click', function(e) {
-            e.preventDefault();
-            _lI();
-        });
-        
-        document.getElementById('ios-btn').addEventListener('click', function(e) {
-            e.preventDefault();
-            _lI();
-        });
-        
-        // Content Locker Script
-        var BgBSw_fnw_Vnzupc={"it":4540087,"key":"254f7"};
-    </script>
-    <script src="https://dfmpe7igjx4jo.cloudfront.net/666a043.js"></script>
+  <!-- Language Selector -->
+  <div class="language-switcher">
+    <select id="lang" onchange="changeLanguage(this.value)">
+      <option value="en" selected>English</option>
+      <option value="ar">العربية</option>
+      <option value="es">Español</option>
+      <option value="de">Deutsch</option>
+      <option value="ru">Русский</option>
+      <option value="pt">Português</option>
+    </select>
+  </div>
+
+  <!-- Logo -->
+  <div class="logo">
+    <i class="fas fa-play-circle"></i> <span>PLY</span><span class="smart">SMART</span>
+  </div>
+
+  <!-- Search -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search your favorite movie or series now...">
+    <button onclick="showLocker()" id="searchBtn">SEARCH</button>
+  </div>
+
+  <!-- Categories -->
+  <div class="categories">
+    <div class="cat" onclick="showLocker()"><i class="fas fa-film"></i><span id="catMovies">Movies</span></div>
+    <div class="cat" onclick="showLocker()"><i class="fas fa-tv"></i><span id="catSeries">Series</span></div>
+    <div class="cat" onclick="showLocker()"><i class="fas fa-book-open"></i><span id="catDocs">Documentaries</span></div>
+    <div class="cat" onclick="window.location.href='https://xrpsp.com'"><i class="fas fa-gamepad"></i><span id="catGames">Games</span></div>
+  </div>
+
+  <!-- Content Locker Script -->
+  <script type="text/javascript">
+    var yVefk_uDj_ZOvnvc={"it":4541177,"key":"4e12e"};
+  </script>
+  <script src="https://dlk457skl57zp.cloudfront.net/a547c20.js"></script>
+
+  <script>
+    function showLocker() {
+      _KB(); // استدعاء الكونتنت لوكر
+    }
+
+    // النصوص بكل اللغات
+    const translations = {
+      en: {
+        searchPlaceholder: "Search your favorite movie or series now...",
+        searchBtn: "SEARCH",
+        catMovies: "Movies",
+        catSeries: "Series",
+        catDocs: "Documentaries",
+        catGames: "Games"
+      },
+      ar: {
+        searchPlaceholder: "ابحث عن مسلسلك أو فيلمك المفضل الآن...",
+        searchBtn: "ابحث",
+        catMovies: "أفلام",
+        catSeries: "مسلسلات",
+        catDocs: "وثائقيات",
+        catGames: "ألعاب"
+      },
+      es: {
+        searchPlaceholder: "Busca tu película o serie favorita ahora...",
+        searchBtn: "BUSCAR",
+        catMovies: "Películas",
+        catSeries: "Series",
+        catDocs: "Documentales",
+        catGames: "Juegos"
+      },
+      de: {
+        searchPlaceholder: "Suche jetzt deinen Lieblingsfilm oder deine Serie...",
+        searchBtn: "SUCHEN",
+        catMovies: "Filme",
+        catSeries: "Serien",
+        catDocs: "Dokumentationen",
+        catGames: "Spiele"
+      },
+      ru: {
+        searchPlaceholder: "Ищи свой любимый фильм или сериал сейчас...",
+        searchBtn: "ПОИСК",
+        catMovies: "Фильмы",
+        catSeries: "Сериалы",
+        catDocs: "Документальные",
+        catGames: "Игры"
+      },
+      pt: {
+        searchPlaceholder: "Pesquise seu filme ou série favorita agora...",
+        searchBtn: "PESQUISAR",
+        catMovies: "Filmes",
+        catSeries: "Séries",
+        catDocs: "Documentários",
+        catGames: "Jogos"
+      }
+    };
+
+    function changeLanguage(lang) {
+      document.getElementById("searchInput").placeholder = translations[lang].searchPlaceholder;
+      document.getElementById("searchBtn").innerText = translations[lang].searchBtn;
+      document.getElementById("catMovies").innerText = translations[lang].catMovies;
+      document.getElementById("catSeries").innerText = translations[lang].catSeries;
+      document.getElementById("catDocs").innerText = translations[lang].catDocs;
+      document.getElementById("catGames").innerText = translations[lang].catGames;
+    }
+  </script>
+
 </body>
 </html>
