@@ -1,13 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Locked</title>
-    <link rel="shortcut icon" type="image/png"
-          href="https://d39fkvblvwpxa1.cloudfront.net/uploads/148610538813e3841abb038f03fc52ba35efd9167f.png"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/javascript">
-    var HkRgm_WCY_xFQJDc={"it":4556377,"key":"99d9f"};
-</script>
-<script src="https://duw03nk63ml3f.cloudfront.net/725c26f.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Your Date</title>
+  <style>
+    /* خلفية وردية ناعمة */
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg, #ff8fb8, #ffb6d9);
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      color: #fff;
+    }
+
+    /* حاوية المحتوى */
+    .container {
+      position: relative;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 40px 15px;
+      z-index: 2;
+    }
+
+    /* صورة البروفايل */
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+
+    /* اسم المستخدم */
+    h1 {
+      font-size: 24px;
+      margin-top: 12px;
+      color: #6b0036;
+    }
+
+    /* بطاقات الروابط */
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #e43a73;
+      border-radius: 40px;
+      margin: 15px 0;
+      padding: 12px 15px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .link-card:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+    }
+
+    .link-card img {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .link-text {
+      flex: 1;
+      text-align: left;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* --- القلوب المتحركة --- */
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: float 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.6) rotate(45deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
-<body style="background: #a0a0a0;">
-<script>_xY();</script>
+<body>
+
+  <!-- قلوب تطفو -->
+  <script>
+    function createHearts() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.background = `hsl(${Math.random() * 360}, 80%, 70%)`;
+      heart.style.animationDuration = 4 + Math.random() * 3 + 's';
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+
+    setInterval(createHearts, 400);
+  </script>
+
+  <div class="container">
+    <img src="https://i.postimg.cc/4dn31D3w/IMG-20251005-161532.jpg" class="profile-img" alt="Profile">
+    <h1>Meet Your Date</h1>
+
+    <!-- الزر الأول -->
+    <a href="https://www.plysmart.com/video.html" class="link-card" style="background:#e43a73;">
+      <img src="https://i.postimg.cc/7LK1BJ3y/m-b-Lq-Duh-Klbya-T-mh-V8-GM7t-EAJkd59w-ZO-b51a063d-64ab-4544-9fcf-dba0607cca65.jpg" alt="">
+      <span class="link-text">💕😻Videos Here😻💕</span>
+    </a>
+
+    <!-- الزر الثاني -->
+    <a href="https://www.plysmart.com/verify.html" class="link-card" style="background:#c41450;">
+      <img src="https://i.postimg.cc/bYWgcn44/m-b-Lq-Duh-Klbya-T-mh-m-U6w-CR2-G2a-Ox-Dn-OM-6a69c1c8-5ab2-47f4-91d3-71d2f9058a24.jpg" alt="">
+      <span class="link-text">🌞🔥Find Me Here🔥🌞</span>
+    </a>
+
+    <footer> ❤️ </footer>
+  </div>
+
 </body>
+</html>
